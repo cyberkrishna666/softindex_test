@@ -1,0 +1,168 @@
+form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+  padding: 1rem;
+
+  div.field {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: .5rem .5rem;
+
+    .error_input {
+      box-shadow: 0 0 5px salmon;
+      border: 1px solid salmon;
+    }
+
+    label {
+      margin: .5rem 0;
+      margin-right: auto;
+      align-self: center;
+      justify-self: center;
+    }
+
+    input {
+      background-color: rgb(250, 250, 250);
+      border: 1px solid rgb(209, 209, 209);
+      border-radius: 1rem;
+      padding: 1rem;
+      flex: 0;
+      font-size: 1.1rem;
+    }
+  }
+
+  div.two_fields {
+    width: 100%;
+    margin: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .error_input {
+      box-shadow: 0 0 5px salmon;
+      border: 1px solid salmon;
+    }
+
+    div.error {
+      position: absolute;
+      z-index: 1;
+      top: 6.5rem;
+      border-radius: .5rem;
+      left: 0;
+      width: 80%;
+      background-color: black;
+      color: white;
+      padding: 1rem;
+      font-size: .8rem;
+      animation: .3s linear fadeIn;
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 100;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: -.5rem;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-top: transparent;
+        border-left: 1rem solid transparent;
+        border-right: 1rem solid transparent;
+        border-bottom: 1rem solid black;
+      }
+    }
+
+    div.field {
+      width: 50%;
+      margin: 0;
+    }
+
+    input {
+      width: 70%;
+      margin-left: .2rem;
+      border-radius: 1rem;
+      border: none;
+      padding: 1rem;
+      background-color: rgb(250, 250, 250);
+      border: 1px solid rgb(209, 209, 209);
+      font-size: 1.1rem;
+
+    }
+
+    select {
+      margin-right: .2rem;
+      border-radius: 1rem;
+      border: none;
+      padding: 1rem;
+      font-size: 1rem;
+      background-color: rgb(250, 250, 250);
+      border: 1px solid rgb(209, 209, 209);
+    }
+  }
+
+  button {
+    font-size: 1.2rem;
+    align-self: center;
+    background-color: rgb(82, 214, 99);
+    border: none;
+    color: white;
+  }
+
+
+    div.error {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      z-index: 1;
+      top: 6.5rem;
+      border-radius: .5rem;
+      right: 0;
+      width: 40%;
+      background-color: black;
+      color: white;
+      padding: 1rem;
+      font-size: .8rem;
+      animation: .3s linear fadeIn;
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 100;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: -.5rem;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-top: transparent;
+        border-left: 1rem solid transparent;
+        border-right: 1rem solid transparent;
+        border-bottom: 1rem solid black;
+      }
+    }
+}

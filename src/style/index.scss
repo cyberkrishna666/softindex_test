@@ -1,0 +1,33 @@
+@import './form.scss';
+@import './table.scss';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  height: 90vh;
+  padding: 1rem;
+  background-color: lightblue;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+
+button {
+  border: 1px solid black;
+  border-radius: .5rem;
+  background-color: inherit;
+  padding: 1rem;
+  margin: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
